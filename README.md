@@ -1,35 +1,50 @@
-Built a home lab using VirtualBox, Ubuntu, Windows, and Nessus to gain hands-on cybersecurity experience.
--  Create Ubuntu VM
--  Create Windows VM
--  User accounts
--  Permissions
-- Firewalls
-- Nessus vulnerability scans
-- Documentation and final report
+Cybersecurity Home Lab
 
-Objective
-Identify and remediate outdated software packages on the Ubuntu virtual machine.
+Overview
 
-## Tools Used
-- Ubuntu APT Package Manager
+This repository documents my cybersecurity home lab built to develop hands-on experience in Linux administration, vulnerability management, Windows security, network analysis, SIEM monitoring, Active Directory, and incident response.
+
+The goal of this project is to gain practical experience using industry tools while documenting each phase similarly to a professional security assessment.
+
+
+Lab Environment
+
+Virtualization
+- Oracle VirtualBox
+
+Operating Systems
+- Ubuntu 26.04 LTS
+- Windows 11 (Upcoming)
+- Kali Linux (Upcoming)
+
+Security Tools
 - Nessus Essentials
+- Nmap (Upcoming)
+- Wireshark (Upcoming)
+- Wazuh SIEM (Upcoming)
 
-## Commands Executed
-bash
-sudo apt update
-apt list --upgradable
-sudo apt upgrade
-sudo reboot
 
-## Findings
-- Initial assessment identified 46 packages requiring updates.
-- Security-related updates included Python, gzip, tar, and other core system packages.
-- All updates were successfully installed.
-- Validation confirmed the system had no remaining available package upgrades.
+Project Roadmap
 
-## Skills Demonstrated
-- Linux package management
-- Patch management
-- Vulnerability remediation
-- Validation of security updates 
+- Ubuntu Administration
+- Vulnerability Management
+- Windows Security
+- Kali Linux
+- SIEM (Wazuh)
+- Active Directory
+- Incident Response
 
+Skills Demonstrated
+
+- Linux Administration
+- System Administration
+- Virtualization
+- Ubuntu
+- SSH
+- Nessus
+- Vulnerability Assessment
+- Patch Management
+- Linux CLI
+- User Management
+- File Permissions
+- Security Documentation
