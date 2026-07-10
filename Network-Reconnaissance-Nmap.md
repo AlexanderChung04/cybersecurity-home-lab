@@ -48,14 +48,89 @@ The output confirmed that Nmap was installed successfully and displayed the inst
 
 ### Screenshot 3
 
-**Figure 3.** Verification that Nmap was successfully installed.
+ Identifying the Target System
+
+Before performing network reconnaissance, the IP address of the Ubuntu virtual machine was identified.
+
+The following command was executed:
+
+```bash
+hostname -I
+```
+
+The command returned the IPv4 address assigned to the virtual machine.
+
+Knowing the correct IP address is essential before beginning any network assessment, as Nmap requires a valid target host or network.
+
+### Screenshot 4
+
+
+
+
+hostname -I
+
+
+
+
+ Host Discovery
+
+The first reconnaissance scan performed with Nmap was a host discovery scan.
+
+Command executed:
+
+
+nmap -sn 10.0.2.15
+
+
+
+The -sn option performs a ping scan that determines whether a host is online without performing a port scan.
+
+This type of scan is commonly used at the beginning of security assessments to identify which systems are active before more detailed scanning begins.
+
+### Screenshot 5
+
+**Figure 5.** Running a host discovery scan against the Ubuntu virtual machine.
 
 ```
 Insert Screenshot:
-nmap version output
+nmap -sn 10.0.2.X
 ```
 
 ---
+
+# Host Discovery Results
+
+The scan successfully identified the Ubuntu virtual machine as an active host.
+
+Nmap reported that the host was online and responded to network probes.
+
+Although only a single host was scanned in this exercise, the same technique can be applied to an entire subnet to quickly identify live systems within an enterprise network.
+
+### Screenshot 6
+
+**Figure 6.** Results of the Nmap host discovery scan.
+
+```
+Insert Screenshot:
+Host is up
+Scan completed
+```
+
+---
+
+# Why Host Discovery Matters
+
+Host discovery is typically the first step in network reconnaissance.
+
+Rather than immediately scanning every possible IP address, security professionals first determine which systems are active. This reduces scan time, minimizes unnecessary network traffic, and ensures that subsequent assessments focus only on reachable systems.
+
+Examples include:
+
+- Identifying newly deployed servers
+- Building network inventories
+- Preparing vulnerability assessments
+- Validating asset management records
+- Locating unauthorized or unknown devices
 
 # Analysis
 
